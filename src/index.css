@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Luxury Tea Theme - Deep burgundy and gold */
+    --background: 30 15% 97%;
+    --foreground: 20 20% 15%;
+
+    --card: 30 20% 98%;
+    --card-foreground: 20 20% 15%;
+
+    --popover: 30 20% 98%;
+    --popover-foreground: 20 20% 15%;
+
+    /* Deep burgundy primary */
+    --primary: 350 45% 25%;
+    --primary-foreground: 40 30% 95%;
+
+    /* Warm cream secondary */
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 20 20% 15%;
+
+    --muted: 30 15% 90%;
+    --muted-foreground: 20 10% 45%;
+
+    /* Gold accent */
+    --accent: 38 70% 50%;
+    --accent-foreground: 20 20% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 350 45% 25%;
+
+    --radius: 0.25rem;
+
+    /* Custom colors */
+    --gold: 38 70% 50%;
+    --gold-light: 40 60% 70%;
+    --burgundy: 350 45% 25%;
+    --burgundy-dark: 350 50% 18%;
+    --cream: 40 30% 95%;
+    --brown: 25 30% 20%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(38, 70%, 55%) 0%, hsl(35, 80%, 45%) 100%);
+    --gradient-burgundy: linear-gradient(135deg, hsl(350, 45%, 30%) 0%, hsl(350, 50%, 18%) 100%);
+    --gradient-cream: linear-gradient(180deg, hsl(40, 30%, 98%) 0%, hsl(30, 20%, 92%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(20 20% 15% / 0.08);
+    --shadow-elegant: 0 10px 40px -10px hsl(20 20% 15% / 0.15);
+    --shadow-gold: 0 4px 20px -4px hsl(38 70% 50% / 0.3);
+
+    --sidebar-background: 30 15% 97%;
+    --sidebar-foreground: 20 20% 15%;
+    --sidebar-primary: 350 45% 25%;
+    --sidebar-primary-foreground: 40 30% 95%;
+    --sidebar-accent: 40 30% 92%;
+    --sidebar-accent-foreground: 20 20% 15%;
+    --sidebar-border: 30 20% 85%;
+    --sidebar-ring: 350 45% 25%;
+  }
+
+  .dark {
+    --background: 20 25% 8%;
+    --foreground: 40 20% 92%;
+
+    --card: 20 20% 12%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 20 20% 12%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 38 70% 55%;
+    --primary-foreground: 20 25% 8%;
+
+    --secondary: 20 20% 18%;
+    --secondary-foreground: 40 20% 92%;
+
+    --muted: 20 15% 20%;
+    --muted-foreground: 30 10% 60%;
+
+    --accent: 38 70% 50%;
+    --accent-foreground: 20 25% 8%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 20 15% 20%;
+    --input: 20 15% 20%;
+    --ring: 38 70% 55%;
+
+    --sidebar-background: 20 25% 10%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 38 70% 55%;
+    --sidebar-primary-foreground: 20 25% 8%;
+    --sidebar-accent: 20 20% 18%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 20 15% 20%;
+    --sidebar-ring: 38 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    @apply font-medium;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-burgundy {
+    background: var(--gradient-burgundy);
+  }
+
+  .bg-gradient-cream {
+    background: var(--gradient-cream);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
