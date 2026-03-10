@@ -49,9 +49,7 @@ const Header = () => {
 
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <h1 className="font-display text-3xl md:text-4xl font-semibold text-foreground tracking-wide">
-                <span className="text-accent">Ceylon</span> Tea
-              </h1>
+              <h1 className="font-display text-3xl md:text-4xl font-semibold text-foreground tracking-wide">Tea Shop</h1>
             </Link>
 
             {/* Desktop Navigation */}
